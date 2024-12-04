@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventArena</title>
+    <script src="https://kit.fontawesome.com/9394570c5d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css" >
+    
+    <style>
+        /* Styles for the modal dialog */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container5 {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 40%;
+}
+
+.register {
+  text-align: center;
+}
+
+.input-group {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding:6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add a simple animation example */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container5 {
+  animation: fadeInUp 1s ease;
+}
+.img2{
+    height: 450px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+  </style>
+</head>
+<body>
+    <br/>
+  
+    <header>
+        <div id="nav">
+            <!-- HEADER SECTION STARTS HERE-->
+            <h1>eventArena</h1>
+            <ul class="list">
+                <li class="list-items">HACKATHONS</li>
+                <li class="list-items">WORKSHOPS</li>
+                <li class="list-item">ORGANIZE A HACKATHON</li>
+            </ul>
+            <ul class="list">
+                <button id="registerBtn" class="btn">SIGN UP</button>
+            </ul>
+        </div>
+    </header>
+    <!--HEADER SECTION ENDS HERE-->
+     <!-- Modal dialog -->
+     <!--registeration starts here-->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <div class="container5">
+            <form class="registration-form" id="registrationFormContent" >
+                <h2 class="register">Register</h2>
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                     <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                     <input type="password" id="confirm-password" name="confirm-password" required>
+                </div><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+           <img src="images/micah-boswell-OPnBJ5L2oxs-unsplash.jpg" class="img2">
+    </div>
+</div>
+<!--registeration ends here-->
+
+    <!-- css animation-->
+    <div class="animate">
+        <div >
+            <div class="box"></div> 
+            <h2 class="maintext">A BEST PLACE FOR <br>EXPLORING AND HOSTING <br><span class="text">HACKATHONS AND WORKSHOPS ALL<br>AROUND THE WORLD</span></h2>
+            <div class="box1"></div>
+        </div>
+        <img src="images/istockphoto-1306326254-612x612.jpg" class="img">
+</div>
+<!--body section starts here-->
+<div id="nav"> 
+    <ul class="list">
+        <li class="list-items"></li>
+    </ul>
+    <div class="search-container">
+        <i class="fas fa-user search-icon"></i> <!-- Font Awesome user icon -->
+        <input type="search" class="search-input" placeholder="Login">
+        <a href="login.html"><i class="fas fa-arrow-right search-icon"></i></a> <!-- Font Awesome arrow icon -->
+    </div>
+    <ul class="list">
+        <li class="list-item"></li>
+        <li class="list-item"></li>
+        <!-- <button id="registerBtn" class="btn">SIGN UP</button> -->
+    </ul>
+</div>
+<center><h4 class="text">Already have an account? Login using username</h4></center>
+<div class="box2"></div>
+<center><h1>HAPPENING NOW</h1></center>
+<div class="super-container">
+<div class="container">
+    <div><h2 class="maintext">EthIndia 2.0</h2>
+        <h4 class="text">15/9/2023</h4>
+        <br><br><br>
+        <h4 class="text">HAPPENING ONLINE</h4>
+        <button id="registerBtn" class="btn">PARTICIPATE</button>
+    </div>  
+</div>
+<div class="container">
+    <div><h2 class="maintext">EthIndia 2.0</h2>
+        <h4 class="text">15/9/2023</h4>
+        <br><br><br>
+        <h4 class="text">HAPPENING ONLINE</h4>
+        <button id="registerBtn" class="btn">PARTICIPATE</button>
+    </div>   
+</div>
+<div class="container">
+    <div><h2 class="maintext">EthIndia 2.0</h2>
+        <h4 class="text">15/9/2023</h4>
+        <br><br><br>
+        <h4 class="text">HAPPENING ONLINE</h4>
+        <button id="registerBtn" class="btn">PARTICIPATE</button>
+    </div>  
+</div>
+</div>
+<center><a href="#" class="list-items">SEE ALL</a></center>
+<br>
+<!-- footer section -->
+<footer class="foot">
+    <center><h4>created by atiya kharwa .all rigths reserved</h4></center>
+</footer>
+
+<script>// Get the modal and the close button
+    const modal = document.getElementById('registrationModal');
+    const closeBtn = document.getElementById('closeBtn');
+    
+    // Function to display the modal
+    function showModal() {
+        modal.style.display = 'block';
+    }
+    
+    // Function to close the modal
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+    
+    // Add event listeners to the register button and close button
+    document.getElementById('registerBtn').addEventListener('click', showModal);
+    closeBtn.addEventListener('click', closeModal);
+    
+    // Close the modal if the user clicks outside the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Manage Hackathon</title>
+
+<link rel="stylesheet" href="style/custom.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--google material icon-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Add Material Icons link here -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+<div class="body-overlay"></div>
+
+    <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <center><h3><img src="images/men.png" class="img-fluid" style="width: 50px; height: 50px;"/><br><br><span>Username</span></h3></center>
+            </div>
+            <ul class="list-unstyled components">
+              <li class="active">
+                <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
+              </li>
+            
+              <li class="dropdown">
+                <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="material-icons">aspect_ratio</i><span>Manage Users</span></a>
+                <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                  <li>
+                    <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 3</a>
+                  </li>
+                </ul>
+              </li>
+            
+              <li class="dropdown">
+                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="material-icons">apps</i><span>Hackathons</span></a>
+                <ul class="collapse list-unstyled menu" id="pageSubmenu2">
+                  <li>
+                    <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 3</a>
+                  </li>
+                </ul>
+              </li>
+            
+              <li class="dropdown">
+                <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="material-icons">equalizer</i><span>Workshops</span></a>
+                <ul class="collapse list-unstyled menu" id="pageSubmenu3">
+                  <li>
+                    <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                    <a href="#">Page 3</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+                 
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+		
+		<div class="top-navbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </button>
+					
+					<a class="navbar-brand" href="#"> Event Arena </a>
+					
+                    <button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+
+                    <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">   
+                            <li class="dropdown nav-item active">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                   <span class="material-icons">notifications</span>
+								                    <span class="notification">2</span>
+                               </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">You have 5 new messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ethIndia hackathon over</a>
+                                    </li>
+                                </ul></li>
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <span class="material-icons">person</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="#">Logout</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+	    </div>
+<div class="main-content">
+    <div class="container mt-3">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="custom-container text-center">
+              <h2>Host a New Hackathon</h2>
+              <p>Ready to create an exciting event? Get started by hosting a new event today.</p>
+              <button class="host-button" ><a href="hosthack.html" style="text-decoration: none; color: black;">Host Events</a></button>
+            </div>
+          </div>
+        </div>
+      </div>	
+    <div class="row ">
+        <div class="col-lg-7 col-md-12">
+           <div class="card" style="min-height: 485px">
+                <div class="card-header card-header-text">
+                 <h4 class="card-title">All Hackathons</h4>
+                </div>
+                <div class="card-content table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="text-primary">
+                                            <tr>
+                                            <th>Sr.no</th>
+                                            <th>Name</th>
+                                            <th>Location</th>
+                                            <th>Mode</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr></thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>hack2.0</td>
+                                                <td>ankleshwar</td>
+                                                <td>Online</td>
+                                                <td>25 oct</td>
+                                                <td><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>hack2.0</td>
+                                                <td>ankleshwar</td>
+                                                <td>Online</td>
+                                                <td>25 oct</td>
+                                                <td><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>hack2.0</td>
+                                                <td>ankleshwar</td>
+                                                <td>Online</td>
+                                                <td>25 oct</td>
+                                                <td><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>hack2.0</td>
+                                                <td>ankleshwar</td>
+                                                <td>Online</td>
+                                                <td>25 oct</td>
+                                                <td><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="col-lg-5 col-md-12">
+                            <div class="card" style="min-height: 485px">
+                                <div class="card-header card-header-text">
+                                    <h4 class="card-title">Steps to host a hackathon</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="streamline">
+                                        <div class="sl-item sl-primary">
+                                            <div class="sl-content">
+                                                <small class="text-muted">step 1</small>
+                                                <p>Click on Host Event</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item sl-danger">
+                                            <div class="sl-content">
+                                                <small class="text-muted">step 2</small>
+                                                <p>Select the event from option that you want to host</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item sl-success">
+                                            <div class="sl-content">
+                                                <small class="text-muted">step 3</small>
+                                                <p>Select hackathon for hosting hackathon/p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="sl-content">
+                                                <small class="text-muted">step 4</small>
+                                                <p>Add basic details of your event</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item sl-warning">
+                                            <div class="sl-content">
+                                                <small class="text-muted">step 5</small>
+                                                <p>Add the schedule and time of event</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="sl-content">
+                                                <small class="text-muted">step 6</small>
+                                                <p>Submit</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+		
+					<footer class="footer">
+                <div class="container-fluid">
+				  <div class="row">
+				  <div class="col-md-6">
+                    <nav class="d-flex">
+                        <ul class="m-0 p-0">
+                            <li>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Company
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+				<div class="col-md-6">
+				 <p class="copyright d-flex justify-content-end"> &copy 2021 Created by
+                        <a href="#">:  Atiya Kharwa</a> 
+                    </p>
+				</div>
+				  </div>
+				    </div>
+            </footer>
+        </div>
+    </div>
+</div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+				$('#content').toggleClass('active');
+            });
+			
+			 $('.more-button,.body-overlay').on('click', function () {
+                $('#sidebar,.body-overlay').toggleClass('show-nav');
+    });		
+  });
+</script>
+</body>
+</html>
+
+

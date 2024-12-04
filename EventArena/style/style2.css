@@ -1,0 +1,44 @@
+/* Custom CSS */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hackathon-form label {
+    font-weight: bold;
+  }
+  
+  .hackathon-form input[type="text"],
+  .hackathon-form input[type="number"],
+  .hackathon-form select,
+  .hackathon-form textarea {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .hackathon-form select {
+    appearance: none;
+    background: url("arrow-down.png") no-repeat right white;
+    background-size: 20px;
+    padding-right: 40px;
+  }
+  
+  .hackathon-form button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .hackathon-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  

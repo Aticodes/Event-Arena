@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventArena</title>
+    <script src="https://kit.fontawesome.com/9394570c5d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <style>
+body{
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgb(245, 247, 247);
+}
+.card {
+  width: 50%;
+  padding: 20px;
+  margin: 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 2px solid #ffffff56;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.card:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+.card1 {
+  width: 45%;
+  height: 85px;
+  padding: 20px;
+  margin: 10px;
+  margin-top: 30px;
+  margin-left: 40px;
+  background-color: #fff;
+  border: 2px solid #163e727a;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.card1:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <!-- HEADER SECTION STARTS HERE-->
+            <h1>eventArena</h1>
+            <div class="user-dropdown" >
+              <img src="images/women.png" id="user-image">
+              <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="#">My Workshops</a>
+                <a href="#">My Profile</a>
+                <a href="#">My Projects</a>
+                <a href="#">Account Settings</a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+        </div>
+    </header>
+    <!--HEADER SECTION ENDS HERE-->
+    <div class="search-container">
+      <input class="form-control form-control-lg" type="text" placeholder="type to search" id="search1"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #0e4da0; margin-top:65px;"></i>
+      <div class="card1">
+        <h3>YOUR PARTICIPATIONS <i class="fa-solid fa-arrow-right fa-xl" style="margin-left: 100px;"></i></h3>
+      </div>
+    </div>
+    <center>
+      <div style="margin: 5px; margin-top: 20px;">
+        <button type="button" class="btn btn-info btn-lg"><a href="hackathons.html" style="color: black;">HACKATHONS</a></button>
+        <button type="button" class="btn btn-info btn-lg"><a href="#" style="color: black;">WORKSHOPS</a></button>
+      </div>
+    </center>
+    <!-- card starts from here -->
+    <div class="main">
+    <div class="card text-center">
+      <div class="hack">
+        <div class="card-header">
+          <img src="images/download.jpg" height="200px" width="200px" style="margin: 10px;">
+          <h5 class="card-title" id="maintext">WORKSHOP NAME</h5>
+        </div>
+      </div>
+      <div class="hack-detail">
+        <div class="card-body">
+          
+          <div class="hackathon-details">
+            <div style="background-color: #0e4da05d; border-style:none; border-radius: 15px; width: 40px; margin-left:90%; height: 40px;"><a href="index.html"><i class="fa-solid fa-link fa-xl" style="color: #000000; margin-top: 20px;"></i></a></div>
+            <div class="detl">
+              <div class="info-container"> <p><i class="far fa-calendar-alt hackathon-icon"></i>starts 15-16, 2023</p></div>
+             </div>
+              <div class="detl"> 
+              <div class="info-container"> <p><i class="fas fa-map-marker-alt hackathon-icon"></i>online</p></div>
+              <div class="info-container"> <p><i class="fa-solid fa-tag hackathon-icon"></i>upcoming</p></div>
+             </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary" id="btnf">PARTICIPATE</a>
+      </div>
+    </div>
+
+
+
+    <div class="card text-center">
+      <div class="hack">
+        <div class="card-header">
+          <img src="images/images (1).png" height="200px" width="200px" style="margin: 10px;">
+          <h5 class="card-title" id="maintext">WORKSHOP NAME</h5>
+        </div>
+      </div>
+      <div class="hack-detail">
+        <div class="card-body">
+          
+          <div class="hackathon-details">
+            <div style="background-color: #0e4da05d; border-style:none; border-radius: 15px; width: 40px; margin-left:90%; height: 40px;"><a href="index.html"><i class="fa-solid fa-link fa-xl" style="color: #000000; margin-top: 20px;"></i></a></div>
+            <div class="detl">
+              <div class="info-container"> <p><i class="far fa-calendar-alt hackathon-icon"></i>starts 15-16, 2023</p></div>
+             </div>
+              <div class="detl"> 
+              <div class="info-container"> <p><i class="fas fa-map-marker-alt hackathon-icon"></i>online</p></div>
+             <div class="info-container"> <p><i class="fa-solid fa-tag hackathon-icon"></i>open</p></div>
+             </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary" id="btnf">PARTICIPATE</a>
+      </div>
+    </div>
+
+</div>
+
+<div class="main">
+  <div class="card text-center">
+    <div class="hack">
+      <div class="card-header">
+        <img src="images/images (3).jpg" height="200px" width="200px" style="margin: 10px;">
+        <h5 class="card-title" id="maintext">WORKSHOP NAME</h5>
+      </div>
+    </div>
+    <div class="hack-detail">
+      <div class="card-body">
+        
+        <div class="hackathon-details">
+          <div style="background-color: #0e4da05d; border-style:none; border-radius: 15px; width: 40px; margin-left:90%; height: 40px;"><a href="index.html"><i class="fa-solid fa-link fa-xl" style="color: #000000; margin-top: 20px;"></i></a></div>
+          <div class="detl">
+            <div class="info-container"> <p><i class="far fa-calendar-alt hackathon-icon"></i>starts 15-16, 2023</p></div>
+           </div>
+            <div class="detl"> 
+            <div class="info-container"> <p><i class="fas fa-map-marker-alt hackathon-icon"></i>online</p></div>
+           <div class="info-container"> <p><i class="fa-solid fa-tag hackathon-icon"></i>open</p></div>
+           </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary" id="btnf">PARTICIPATE</a>
+    </div>
+  </div>
+
+
+
+  <div class="card text-center">
+    <div class="hack">
+      <div class="card-header">
+        <img src="images/images (6).jpg" height="200px" width="200px" style="margin: 10px;">
+        <h5 class="card-title" id="maintext">WORKSHOP NAME</h5>
+      </div>
+    </div>
+    <div class="hack-detail">
+      <div class="card-body">
+        
+        <div class="hackathon-details">
+          <div style="background-color: #0e4da05d; border-style:none; border-radius: 15px; width: 40px; margin-left:90%; height: 40px;"><a href="index.html"><i class="fa-solid fa-link fa-xl" style="color: #000000; margin-top: 20px;"></i></a></div>
+          <div class="detl">
+            <div class="info-container"> <p><i class="far fa-calendar-alt hackathon-icon"></i>Date: August 15-16, 2023</p></div>
+           </div>
+            <div class="detl"> 
+            <div class="info-container"> <p><i class="fas fa-map-marker-alt hackathon-icon"></i>online</p></div>
+           <div class="info-container"> <p><i class="fa-solid fa-tag hackathon-icon"></i>open</p></div>
+           </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary" id="btnf">PARTICIPATE</a>
+    </div>
+  </div>
+
+</div>
+
+    <!-- footer section -->
+<footer class="foot">
+    <center><h4></h4></center>
+</footer>
+
+</body>
+</html>

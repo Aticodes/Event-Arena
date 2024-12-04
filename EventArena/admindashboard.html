@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Dashboard</title>
+
+<link rel="stylesheet" href="style/custom.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--google material icon-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Add Material Icons link here -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- links for data tables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+  
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+</head>
+<body>
+  <script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+  </script>
+
+<div class="wrapper">
+<div class="body-overlay"></div>
+
+    <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <center><h3><img src="images/men.png" class="img-fluid" style="width: 50px; height: 50px;"/><br><br><span>Username</span></h3></center>
+            </div>
+            <ul class="list-unstyled components">
+              <li class="active">
+                <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
+              </li>
+            
+              <li class="dropdown">
+                <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="material-icons">aspect_ratio</i><span>Users</span></a>
+                <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                  <li>
+                    <a href="register.html">Add new user</a>
+                  </li>
+                  <li>
+                    <a href="adminhackathon.html">Manage Users</a>
+                  </li>
+                </ul>
+              </li>
+            
+              <li class="dropdown">
+                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="material-icons">apps</i><span>Hackathons</span></a>
+                <ul class="collapse list-unstyled menu" id="pageSubmenu2">
+                  <li>
+                    <a href="hosthack.html">Host Hackathon</a>
+                  </li>
+                  <li>
+                    <a href="adminhackathon.html">Manage Hackathons</a>
+                  </li>
+                </ul>
+              </li>
+            
+              <li class="dropdown">
+                <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                  <i class="material-icons">equalizer</i><span>Workshops</span></a>
+                <ul class="collapse list-unstyled menu" id="pageSubmenu3">
+                  <li>
+                    <a href="hosthack.html">Host Workshop</a>
+                  </li>
+                  <li>
+                    <a href="adminworkshop.html">Manage Workshops</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+                 
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+		
+		<div class="top-navbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </button>
+					
+					<a class="navbar-brand" href="#"> Event Arena </a>
+					
+                    <button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+
+                    <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">   
+                            <li class="dropdown nav-item active">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                   <span class="material-icons">notifications</span>
+								                    <span class="notification">2</span>
+                               </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">You have 5 new messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ethIndia hackathon over</a>
+                                    </li>
+                                </ul></li>
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      <span class="material-icons">person</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="#">Logout</a>
+                                    </div>
+                                  </li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+	    </div>
+
+		<div class="main-content">
+			<!-- calender starts -->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="calendar">
+              <div class="calendar-header">
+                <button id="prevMonthBtn" class="btn btn-secondary"><i class="fas fa-chevron-left">prev</i></button>
+                <h2 id="currentMonth"></h2>
+                <button id="nextMonthBtn" class="btn btn-secondary"><i class="fas fa-chevron-right">next</i></button>
+              </div>
+              <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+          </div>
+          <div class="event-list col-md-6">
+            <!-- Event list will be dynamically populated here -->
+          </div>
+        </div>
+      </div>
+      <!-- calendar over -->
+			<div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-warning">
+                                       <span class="material-icons">equalizer</span>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Users</strong></p>
+                                    <h3 class="card-title">70,340</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons text-info">info</i>
+                                        <a href="#pablo">Total Users</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-rose">
+                                       <span class="material-icons">shopping_cart</span>
+
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Hackathons</strong></p>
+                                    <h3 class="card-title">102</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">local_offer</i>Total Hackathons
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-success">
+                                        <span class="material-icons">attach_money</span>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Workshops</strong></p>
+                                    <h3 class="card-title">$23,100</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">date_range</i>Total Workshops
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- table starts -->
+					<div>
+                        <div>
+                            <div class="card">
+                                <div class="card-header card-header-text">
+                                    <div class="container mt-1">
+                                      <div class="row justify-content-center">
+                                        <div class="col-md-6">
+                                          <form class="form-inline">
+                                            <div class="input-group">
+                                              <h4 class="card-title mr-4 mt-1">Search Users</h4>
+                                              <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="searchButton">
+                                              <div class="input-group-append">
+                                                <button class="search-button ml-2 btn-sm" type="button" id="searchButton">Search</button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="card-content table-responsive display" id="myTable">
+                                    <table class="table table-hover">
+                                        <thead class="text-primary">
+                                            <tr><th>sr.no</th>
+                                            <th>Name</th>
+                                            <th>email</th>
+                                            <th>Country</th>
+                                        </tr></thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Bob Williams</td>
+                                                <td>$23,566</td>
+                                                <td>USA</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Mike Tyson</td>
+                                                <td>$10,200</td>
+                                                <td>Canada</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Tim Sebastian</td>
+                                                <td>$32,190</td>
+                                                <td>Netherlands</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Philip Morris</td>
+                                                <td>$31,123</td>
+                                                <td>Korea, South</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Minerva Hooper</td>
+                                                <td>$23,789</td>
+                                                <td>South Africa</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Hulk Hogan</td>
+                                                <td>$43,120</td>
+                                                <td>Netherlands</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Angelina Jolie </td>
+                                                <td>$12,140</td>
+                                                <td>Australia</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+		
+					<footer class="footer">
+                <div class="container-fluid">
+				  <div class="row">
+				  <div class="col-md-6">
+                    <nav class="d-flex">
+                        <ul class="m-0 p-0">
+                            <li>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Company
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+				<div class="col-md-6">
+				 <p class="copyright d-flex justify-content-end"> &copy 2021 Created by
+                        <a href="#">:  Atiya Kharwa</a> 
+                    </p>
+				</div>
+				  </div>
+				    </div>
+            </footer>
+        </div>
+    </div>
+</div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+				$('#content').toggleClass('active');
+            });
+			
+			 $('.more-button,.body-overlay').on('click', function () {
+                $('#sidebar,.body-overlay').toggleClass('show-nav');
+    });		
+  });
+</script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<!-- Add Bootstrap JS and your custom scripts here -->
+<script>
+  const currentMonthElement = document.getElementById('currentMonth');
+  const calendarGrid = document.getElementById('calendarGrid');
+  const prevMonthBtn = document.getElementById('prevMonthBtn');
+  const nextMonthBtn = document.getElementById('nextMonthBtn');
+  const eventList = document.querySelector('.event-list');
+
+  // Simulated event data
+  const events = {
+    '2023-08-01': ['Event 1', 'Event 2', 'Event 3'],
+    '2023-08-15': ['Event A', 'Event B'],
+    // Add more event data here
+  };
+
+  let currentDate = new Date();
+
+  function updateCalendar() {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    currentMonthElement.textContent = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long' }).format(currentDate);
+
+    calendarGrid.innerHTML = '';
+
+    for (let day = 1; day <= daysInMonth; day++) {
+      const cell = document.createElement('div');
+      cell.classList.add('calendar-cell');
+      cell.textContent = day;
+      cell.addEventListener('click', () => showEvents(new Date(year, month, day)));
+      calendarGrid.appendChild(cell);
+    }
+  }
+
+  function showEvents(date) {
+    const formattedDate = date.toISOString().split('T')[0];
+    const eventItems = events[formattedDate] || [];
+    const eventListItems = eventItems.map(event => `<div class="event-item">${event}</div>`).join('');
+
+    eventList.innerHTML = `<h3>Events on ${formattedDate}</h3>${eventListItems}`;
+    eventList.style.display = 'block';
+  }
+
+  prevMonthBtn.addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    updateCalendar();
+    eventList.style.display = 'none';
+  });
+
+  nextMonthBtn.addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    updateCalendar();
+    eventList.style.display = 'none';
+  });
+
+  updateCalendar();
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <!-- Add Bootstrap CSS link here -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Add your custom CSS link here -->
+  <style>
+    /* Custom CSS */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-container {
+  padding: 50px 0;
+}
+
+.user-info {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-picture {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-name {
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-role {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.user-bio {
+  color: #6c757d;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: #333;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+.section {
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.degree-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.education-details {
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.graduation-date {
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 18px;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+  color: #6c757d;
+}
+
+.experience {
+  margin-top: 30px;
+}
+
+.employer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.role {
+  font-size: 18px;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+.dates {
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+.description {
+  color: #6c757d;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid profile-container">
+    <div class="row">
+      <!-- Left Column - User Info -->
+      <div class="col-md-4 user-column">
+        <div class="user-info">
+          <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+          <h1 class="user-name">John Doe</h1>
+          <p class="user-role">Frontend Developer</p>
+          <div class="user-bio">
+            Passionate about learning and coding. Transforming ideas into reality.
+          </div>
+          <div class="social-links">
+            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column - Details -->
+      <div class="col-md-7 details-column">
+        <div class="section degree-info">
+          <h2 class="section-title">Education</h2>
+          <div class="degree">
+            <h3 class="degree-title">Bachelor of Science in Computer Science</h3>
+            <p class="education-details">University of ABC</p>
+            <p class="graduation-date">Graduating in August 2024</p>
+          </div>
+        
+          <h2 class="section-title">Skills</h2>
+          <ul class="skills-list">
+            <li>Web Development</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>UI/UX Design</li>
+            <li>Problem Solving</li>
+          </ul>
+       
+          <h2 class="section-title">Work Experience</h2>
+          <div class="experience">
+            <h3 class="employer">ABC Tech Solutions</h3>
+            <p class="role">Frontend Developer</p>
+            <p class="dates">June 2023 - Present</p>
+            <p class="description">
+              Developed user-friendly and responsive web interfaces for clients, exceeding design expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+  <!-- Add Bootstrap JS and your custom scripts here -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

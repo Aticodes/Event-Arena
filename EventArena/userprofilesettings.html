@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+<script src="https://kit.fontawesome.com/9394570c5d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <header>  
+        <!-- HEADER SECTION STARTS HERE-->
+        <nav style="margin-top: 10px;">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <h1 style="margin-right: 30px;">eventArena</h1>
+      <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Profile</button>
+      <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><a href="hackathons.html" style="text-decoration: none; color: black;">Hackathons</a></button>
+      <button class="nav-link" id="nav-work-tab" data-toggle="tab" data-target="#nav-work" type="button" role="tab" aria-controls="nav-work" aria-selected="false"><a href="workshops.html" style="text-decoration: none; color: black;">workshops</a></button>
+      <button class="nav-link" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" style="margin-right: 450px;"><a href="userprojects.html" style="text-decoration: none; color: black;">Projects</a></button>
+      
+      <div>
+        <h5 class="mt-3">Username</h5>
+      </div>
+      <div class="user-dropdown">
+        <img src="images/women.png" id="user-images">
+        <div class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="#">Organize hackathon</a>
+            <a href="#">My Hackathons</a>
+            <a href="#">My Profile</a>
+            <a href="#">My Projects</a>
+            <a href="#">Account Settings</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+</div>
+</nav>
+</header><hr>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <!-- Content for Home tab -->
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab-inner" role="tablist">
+          <button class="av-link active" id="nav-home-tab-inner" data-toggle="tab" data-target="#nav-home-inner" type="button" role="tab" aria-controls="nav-home-inner" aria-selected="true">About</button>
+          <button class="av-link" id="nav-profile-tab-inner" data-toggle="tab" data-target="#nav-profile-inner" type="button" role="tab" aria-controls="nav-profile-inner" aria-selected="false">Education</button>
+          <button class="av-link" id="nav-contact-tab-inner" data-toggle="tab" data-target="#nav-contact-inner" type="button" role="tab" aria-controls="nav-contact-inner" aria-selected="false">Experiance</button>
+        </div>
+      </nav>
+      <!-- basic info content starts here -->
+      <div class="tab-content" id="nav-tabContent-inner">
+        <div class="tab-pane fade show active" id="nav-home-inner" role="tabpanel" aria-labelledby="nav-home-tab-inner">
+            <div class="containers mt-5">
+                <div class="form-container">
+                  <h2 class="mb-4">basic Information</h2>
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" class="form-control" id="first-name" name="first-name" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" class="form-control" id="last-name" name="last-name" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="gender">Gender:</label>
+                      <select class="form-control" id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="bio">Bio:</label>
+                      <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="resume">Upload Resume:</label>
+                      <input type="file" class="form-control-file" id="resume" name="resume">
+                    </div>
+                    <div class="form-group">
+                      <label for="links">Links:</label>
+                      <textarea class="form-control" id="links" name="links" rows="2" placeholder="Add links here"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+        </div>
+        <!-- basic info section ends here -->
+        <!-- education information starts from here -->
+        <div class="tab-pane fade" id="nav-profile-inner" role="tabpanel" aria-labelledby="nav-profile-tab-inner">
+          <div class="row">
+            <div class="col-md-6">  
+          <div class="containers mt-5">
+                <div class="form-container">
+                  <h2 class="mb-4"> Education Information</h2>
+                  <form>
+                    <div class="form-group">
+                      <label for="education-status">Do you have a degree or formal education?</label>
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="degree-yes" name="education-status" value="degree">
+                        <label class="form-check-label" for="degree-yes">Yes</label>
+                      </div>
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" id="degree-no" name="education-status" value="no-degree">
+                        <label class="form-check-label" for="degree-no">No</label>
+                      </div>
+                    </div>
+                    <div class="form-group" id="degree-details" style="display: none;">
+                      <label for="degree-type">Degree Type:</label>
+                      <input type="text" class="form-control" id="degree-type" name="degree-type">
+                    </div>
+                    <div class="form-group" id="education-institution" style="display: none;">
+                      <label for="institution">Education Institution:</label>
+                      <input type="text" class="form-control" id="institution" name="institution">
+                    </div>
+                    <div class="form-check" id="currently-studying-checkbox" style="display: none;">
+                      <input type="checkbox" class="form-check-input" id="currently-studying" name="currently-studying">
+                      <label class="form-check-label" for="currently-studying">Currently Studying</label>
+                    </div>
+                    <div class="form-group" id="field-of-study" style="display: none;">
+                      <label for="study-field">Field of Study:</label>
+                      <input type="text" class="form-control" id="study-field" name="study-field">
+                    </div>
+                    <div class="form-row" id="expected-graduation" style="display: none;">
+                      <div class="form-group col-md-6">
+                        <label for="expected-month">Expected Month of Graduation:</label>
+                        <input type="text" class="form-control" id="expected-month" name="expected-month">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="expected-year">Expected Year of Graduation:</label>
+                        <input type="text" class="form-control" id="expected-year" name="expected-year">
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div> 
+</div>
+          <div class="col-md-6">
+          <div class="containers custom-container mt-5">
+                <h3 class=" mb-4">which of the following describes you best?</h3>
+                <div class="option">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="designer">
+                    <label class="form-check-label" for="designer">Designer</label>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="frontend">
+                    <label class="form-check-label" for="frontend">Frontend Developer</label>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="backend">
+                    <label class="form-check-label" for="backend">Backend Developer</label>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="mobile">
+                    <label class="form-check-label" for="mobile">Mobile Developer</label>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="blockchain">
+                    <label class="form-check-label" for="blockchain">Blockchain Developer</label>
+                  </div>
+                </div>
+                <div class="option">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="other">
+                    <label class="form-check-label" for="other">Other</label>
+                    <input type="text" class="form-control mt-2" id="otherText" placeholder="Enter another option">
+                  </div>
+                </div>
+                <div class="option">
+                  <form id="selectedRolesForm">
+                    <fieldset>
+                      <legend>Others:</legend>
+                      <div id="selectedRoles" class="form-group"></div>
+                    </fieldset>
+                  </form>
+                </div>
+                <div class="option">
+                  <button class="btn btn-primary" id="addOther">Add Other</button>
+                </div>
+              </div>
+        </div>
+        </div>
+      </div>
+      <!-- education content ends here -->
+      <!-- content for experiance starts -->
+      <div class="tab-pane fade" id="nav-contact-inner" role="tabpanel" aria-labelledby="nav-contact-tab-inner">
+        <div class="containers mt-5">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="custom-container">
+                <h2 class="text-center mb-4">Work Experience Form</h2>
+                <form>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="has-experience" name="has-experience" onchange="toggleExperienceFields()">
+                      <label class="form-check-label" for="has-experience">Don't  have any work experience?</label>
+                    </div>
+                  </div>
+                  <div id="experience-fields" style="display: none;">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="employer">Employer:</label>
+                        <input type="text" class="form-control" id="employer" name="employer" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="role">Role:</label>
+                        <input type="text" class="form-control" id="role" name="role" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="from-date">From Date:</label>
+                        <input type="date" class="form-control" id="from-date" name="from-date" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="to-date">To Date:</label>
+                        <input type="date" class="form-control" id="to-date" name="to-date" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Description of Work:</label>
+                      <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- content for experiance ends -->
+      </div>
+    </div>
+
+    <!-- Content for Hackathon tab -->
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="row">
+        <div class="containers col-md-3" style="position: relative; display: inline-block;">
+        
+          <a href="hackathons.html"><img src="images/micah-boswell-OPnBJ5L2oxs-unsplash.jpg" style="height: 300px; width: 300px; border-radius: 5px;z-index: -1;"></a>
+        
+        <i class="far fa-compass icon-overlay" style="position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: white;
+        z-index: 0;"></i>
+
+        <h2  style="position: absolute;top: 70%;left: 50%;transform: translate(-50%, -50%);font-size: 20px;color: white;z-index: 0;">Explore More</h2>
+
+      </div> <div class="containers col-md-9">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="custom-container mt-5">
+              <h2 class="mb-4">Host new event</h2>
+              <div class="file-upload-wrapper">
+                <button type="submit" class="btn btn-primary">Host</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <br>
+<div class="containers">
+  <br>
+  <h2>Your Hackathons</h2><br>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table custom-table">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th></th> <!-- Empty column for the arrow link -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td><span class="badge badge-success">Accepted</span></td>
+            <td><a href="#" class="arrow-link">&#10148;</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td><span class="badge badge-warning">Pending</span></td>
+            <td><a href="#" class="arrow-link">&#10148;</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Michael Johnson</td>
+            <td><span class="badge badge-success">Accepted</span></td>
+            <td><a href="#" class="arrow-link">&#10148;</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  `
+  </div>
+</div>
+</div>
+<!-- hackathons over -->
+
+<!-- workshop tab -->
+<div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
+  <div class="row">
+    <div class="containers col-md-3" style="position: relative; display: inline-block;">
+    
+      <a href="hackathons.html"><img src="images/micah-boswell-OPnBJ5L2oxs-unsplash.jpg" style="height: 300px; width: 300px; border-radius: 5px;z-index: -1;"></a>
+    
+    <i class="far fa-compass icon-overlay" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    z-index: 0;"></i>
+
+    <h2  style="position: absolute;top: 70%;left: 50%;transform: translate(-50%, -50%);font-size: 20px;color: white;z-index: 0;">Explore More</h2>
+
+  </div> <div class="containers col-md-9">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="custom-container mt-5">
+          <h2 class="mb-4">Host new event</h2>
+          <div class="file-upload-wrapper">
+            <button type="submit" class="btn btn-primary">Host</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+<div class="containers">
+<br>
+<h2>Your Workshops</h2><br>
+<div class="row">
+<div class="col-md-12">
+  <table class="table custom-table">
+    <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th></th> <!-- Empty column for the arrow link -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John Doe</td>
+        <td><span class="badge badge-success">Accepted</span></td>
+        <td><a href="#" class="arrow-link">&#10148;</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jane Smith</td>
+        <td><span class="badge badge-warning">Pending</span></td>
+        <td><a href="#" class="arrow-link">&#10148;</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Michael Johnson</td>
+        <td><span class="badge badge-success">Accepted</span></td>
+        <td><a href="#" class="arrow-link">&#10148;</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>  `
+</div>
+</div>
+</div>
+<!-- workshop over -->
+
+<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <!-- Content for Contact tab -->
+    
+<div class="containers">
+  <h2>Share What You Built</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="custom-container mt-5">
+        <h2 class="mb-4">Add new Project</h2>
+        <div class="file-upload-wrapper">
+          <button class="file-upload-button">Choose a File</button>
+          <input type="file" class="file-upload-input" id="file-upload" name="file-upload">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+<script src="javascript/education.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
